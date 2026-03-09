@@ -1,0 +1,100 @@
+        :root {
+            --azul-principal: #004a99;
+            --azul-claro: #00bcd4;
+            --branco: #ffffff;
+            --cinza-fundo: #dfe3e6;
+            --cinza-texto: #333333;
+            --verde-sucesso: #28a745;
+        }
+
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            margin: 0; 
+            padding: 20px;
+            background-color: var(--cinza-fundo);
+            color: var(--cinza-texto);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .sistema-container {
+            width: 100%;
+            max-width: 600px;
+            background-color: var(--branco);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border-top: 5px solid var(--azul-principal);
+        }
+
+        .header-sistema {
+            text-align: center;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .header-sistema img { width: 100%; max-width: 400px; height: auto; margin-bottom: 15px; }
+        .header-sistema h2 { margin: 0; color: var(--azul-principal); font-size: 20px; text-transform: uppercase; }
+        
+        .form-group { margin-bottom: 20px; }
+        label { font-weight: bold; display: block; margin-bottom: 5px; color: var(--azul-principal); font-size: 14px;}
+        .obrigatorio { color: red; }
+        
+        input[type="text"], select, textarea { 
+            width: 100%; padding: 12px; box-sizing: border-box; border: 1px solid #ccc; 
+            border-radius: 5px; font-size: 15px; transition: border-color 0.3s;
+            font-family: inherit;
+        }
+
+        input:focus, select:focus, textarea:focus { border-color: var(--azul-claro); outline: none; }
+        textarea { height: 90px; resize: vertical; font-family: inherit; }
+
+        .radio-group {
+            background-color: #f9f9f9;
+            border: 1px solid #eee;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        .radio-option {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+        .radio-option:last-child { margin-bottom: 0; }
+        .radio-option input { margin-right: 10px; transform: scale(1.3); cursor: pointer; }
+        .radio-option label { margin: 0; color: var(--cinza-texto); font-weight: normal; font-size: 15px; cursor: pointer;}
+
+        .aviso-atraso {
+            color: var(--azul-principal);
+            font-weight: bold;
+            text-align: center;
+            font-size: 15px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            border: 2px dashed var(--azul-principal);
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #f0f4f8;
+        }
+
+        .area-botoes { margin-top: 25px; text-align: center; }
+        button { 
+            width: 100%; padding: 15px; color: white; border: none; 
+            border-radius: 5px; cursor: pointer; font-size: 16px; font-weight: bold; 
+            background-color: var(--azul-principal); transition: background 0.3s;
+        }
+        button:hover { background-color: #003366; }
+
+        #telaSucesso {
+            display: none;
+            text-align: center;
+            padding: 20px 0;
+        }
+        #telaSucesso h3 { color: var(--verde-sucesso); font-size: 22px; margin-bottom: 10px;}
+        #telaSucesso p { font-size: 16px; color: var(--cinza-texto); }
+        .btn-voltar { background-color: var(--cinza-texto); margin-top: 20px;}
+

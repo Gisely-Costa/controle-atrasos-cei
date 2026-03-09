@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Atrasos - CEI "Áttila de Almeida Miranda"</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="sistema-container">
+        <div class="header-sistema">
+            <img src="logo.png.png" alt="Cabeçalho CEI">
+            <h2>Registro de Atraso - 1ª Aula</h2>
+        </div>
+
+        <form id="formAtraso">
+            <div class="form-group">
+                <label>Nome Completo do Estudante: <span class="obrigatorio">*</span></label>
+                <input type="text" id="nome" name="nome" required placeholder="Digite seu nome completo">
+            </div>
+
+            <div class="form-group">
+                <label>Série e Turma: <span class="obrigatorio">*</span></label>
+                <select id="turma" name="turma" required>
+                    <option value="" disabled selected>Selecione sua turma na lista...</option>
+                    
+                    <optgroup label="1ª Série">
+                        <option value="1ªM1 - MCN">1ªM1 - MCN</option>
+                        <option value="1ªM2 - MCN">1ªM2 - MCN</option>
+                        <option value="1ªM3 - MCN">1ªM3 - MCN</option>
+                        <option value="1ªM1 - LCH">1ªM1 - LCH</option>
+                        <option value="1ªM2 - LCH">1ªM2 - LCH</option>
+                        <option value="1ªM3 - LCH">1ªM3 - LCH</option>
+                    </optgroup>
+
+                    <optgroup label="2ª Série">
+                        <option value="2ªM1 - LCH">2ªM1 - LCH</option>
+                        <option value="2ªM2 - LCH">2ªM2 - LCH</option>
+                        <option value="2ªM3 - LCH">2ªM3 - LCH</option>
+                        <option value="2ªM1 - MCN">2ªM1 - MCN</option>
+                        <option value="2ªM2 - MCN">2ªM2 - MCN</option>
+                    </optgroup>
+
+                    <optgroup label="3ª Série">
+                        <option value="3ªM1 - EFF">3ªM1 - EFF</option>
+                        <option value="3ªM1 - MOD 1">3ªM1 - MOD 1</option>
+                        <option value="3ªM1 - MOD 2">3ªM1 - MOD 2</option>
+                        <option value="3ªM1 - TVC">3ªM1 - TVC</option>
+                    </optgroup>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Classificação do Atraso: <span class="obrigatorio">*</span></label>
+                <div class="radio-group">
+                    <div class="radio-option">
+                        <input type="radio" id="comAtestado" name="tipoAtraso" value="Com Atestado/Justificativa Formal" required>
+                        <label for="comAtestado">Atraso COM atestado médico ou justificativa</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="semAtestado" name="tipoAtraso" value="Sem Atestado" required>
+                        <label for="semAtestado">Atraso SEM atestado médico</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Motivo do Atraso: <span class="obrigatorio">*</span></label>
+                <textarea id="motivo" name="motivo" required placeholder="Descreva brevemente por que você chegou atrasado hoje..."></textarea>
+            </div>
+
+            <div class="aviso-atraso">
+                Após 3 atrasos, o responsável será convocado para comparecer à escola.
+            </div>
+
+            <div class="area-botoes">
+                <button type="submit" id="btnEnviar">Registrar Atraso</button>
+            </div>
+        </form>
+
+        <div id="telaSucesso">
+            <h3>✅ Registro Concluído!</h3>
+            <p>Seu atraso foi registrado no sistema da coordenação.</p>
+            <p><strong>Por favor, dirija-se à sala de aula em silêncio para não atrapalhar a aula em andamento.</strong></p>
+            <button class="btn-voltar" onclick="voltarFormulario()">Novo Registro</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
