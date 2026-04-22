@@ -10,7 +10,7 @@ document.getElementById('formAtraso').addEventListener('submit', function(e) {
     const formData = new FormData(this);
 
     // URL original do seu Google Apps Script
-    const urlScript = 'https://script.google.com/macros/s/AKfycbxKC7Zz9OrRkVTxoWvIPAt0g-b9A-wcRMzLcuhv0PMP0uytpzsMN6tatuW2zc_GvEAH/exec'; 
+    const urlScript = 'https://script.google.com/macros/s/AKfycbzumX3myJFn3eO3M0eeEjtYHbcC-Jylbn6Kokbo1QBh925GdZK-C2S8y_eLLGZ2bogX/exec';
 
     fetch(urlScript, {
         method: 'POST',
